@@ -27,6 +27,13 @@ img {
     --border-color: #ddd;
 }
 
+hr {
+    border: none;
+    height: 2px;
+    background-color: #ddd;
+    color: #ddd;
+}
+
 /*GRID LAYOUT*/
 
 .grid-container {
