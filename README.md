@@ -2,7 +2,11 @@
 
 ![webpage screenshot](images/webpage-screenshot.jpg)
 
+<br>
+
 ---
+
+<br>
 
 # Responsive Design
 
