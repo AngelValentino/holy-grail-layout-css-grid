@@ -1,0 +1,305 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;500;600;800&family=VT323&display=swap');
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins";
+}
+
+h1, h2, h3, h4, h5, h6, p, ul {
+    margin: 0;
+    padding: 0;
+}
+
+ul {
+    list-style-type: none;
+}
+
+img {
+    display: block;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --border-color: #ddd;
+}
+
+/*GRID LAYOUT*/
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+}
+
+/*HEADER*/
+
+header {
+    grid-column: span 3;
+    text-align: center;
+    border-bottom: 1px solid var(--border-color);
+}
+
+header h1 {
+    margin: 20px 0;
+}
+
+/*NAVIGATION MENU*/
+
+nav {
+    border-right: 1px solid var(--border-color);
+}
+
+nav img {
+    display: block;
+    max-width: 40px;
+    object-fit: cover;
+    margin: 5px 5px 5px 30px;
+}
+
+nav div {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+nav h3 {
+    margin: 50px 30px 30px;
+    font-size: 1.5rem;
+    font-weight: normal;
+}
+
+nav ul li {
+    padding: 10px 0;
+    font-size: 1.05rem;
+    flex-grow: 1;
+}
+
+nav ul div:hover {
+    background-color: #ebebeb;
+    cursor: pointer;
+    user-select: none;
+}
+
+/*MAIN*/
+
+main {
+    padding: 50px 60px;
+    background-color: #f7f7f7;
+}
+
+main img {
+    aspect-ratio: 6/4;
+    object-fit: cover;
+}
+
+main h2 {
+    font-size: 3.5rem;
+    margin: 0 0 30px;
+}
+
+main h3 {
+    font-size: 2rem;
+    margin: 50px 0 30px;
+}
+
+main p {
+    margin: 30px 0 0;
+    line-height: 1.8rem;
+}
+
+article img {
+    width: 100%;
+}
+
+aside {
+    border-left: 1px solid var(--border-color);
+}
+
+footer {
+    grid-column: span 3;
+    text-align: center;
+    border-top: 1px solid var(--border-color);
+}
+
+/*ASIDE*/
+
+aside {
+    padding: 30px;
+}
+
+aside div p:first-of-type {
+    font-weight: bold;
+}
+
+aside p {
+    margin: 15px 0;
+}
+
+/*FOOTER*/
+
+footer {
+    padding: 50px;
+}
+
+/*MEDIA QUERIES*/
+
+/*NAVGATION MENU / MAIN / ASIDE*/
+
+@media only screen and (max-width: 1400px) {
+    main {
+        padding: 50px 30px;
+    }
+}
+
+@media only screen and (max-width: 1200px) {
+    /*NAVIGATION MENU*/
+    nav {
+        grid-column: span 3;
+        border-right: 0;
+        border-bottom: 1px solid var(--border-color);
+        padding: 30px;
+    }
+
+    nav h3 {
+        display: none;
+    }
+
+    nav img {
+        display: block;
+        width: 100%;
+        max-width: 100px;
+        margin: 0;
+    }
+
+    nav ul {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+    }
+
+    nav li {
+        padding: 0 30px 0 !important;
+    }
+
+    nav li:hover {
+        background-color: transparent;
+    }
+
+    nav div:hover {
+        background-color: #ddd;
+        border-radius: 50px;
+        cursor: pointer;
+    }
+
+    nav div {
+        display: grid;
+        grid-template-columns: 1fr 3fr;
+        justify-items: start;
+        align-items: center;
+    }
+
+    /*MAIN*/
+    main {
+        grid-column: span 2;
+    }
+
+    .grid-container {
+        column-gap: 0;
+    }
+
+    /*ASIDE*/
+    aside {
+        padding: 30px 20px;
+    }
+}
+
+/*NAVIGATION MENU*/
+
+@media only screen and (max-width: 850px) {
+    nav ul {
+        grid-template-columns: repeat(6, 1fr);
+        gap: 30px;
+    }
+
+    nav li {
+        display: none;
+    }
+
+    nav div {
+        display: block;
+        margin: 0 auto;
+    }
+
+    nav div:hover {
+        background-color: #ddd;
+        border-radius: 50%;
+        cursor: pointer;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    /*NAVIGATION MENU*/
+    nav ul {
+        gap: 20px;
+    }
+
+    nav {
+        padding: 20px;
+    }
+
+    /*MAIN*/
+    article h2 {
+        font-size: 3rem;
+    }
+}
+
+/*MAIN*/
+
+@media only screen and (max-width: 500px) {
+    article h2 {
+        font-size: 2.5rem;
+    }
+    main h3 {
+        font-size: 1.5rem;
+    }
+}
+
+@media only screen and (max-width: 450px) {
+    /*NAVIGATION MENU*/
+    nav ul {
+        gap: 10px;
+    }
+}
+
+@media only screen and (max-width: 350px) {
+    /*MAIN*/
+    article h2 {
+        font-size: 2rem;
+    }
+
+    /*NAVIGATION MENU*/
+    nav ul {
+        gap: 5px;
+    }
+}
+
+/*MAIN AND ASIDE*/
+
+@media only screen and (max-width: 980px) {
+    /*MAIN*/
+    main {
+        grid-column: span 3;
+        background-color: #fff;
+    }
+
+    /*ASIDE*/
+    aside {
+        grid-column: span 3;
+        border-left: 0;
+        border-top: 1px solid var(--border-color);
+        padding: 30px;
+    }
+}
