@@ -84,11 +84,6 @@ nav ul li {
     flex-grow: 1;
 }
 
-nav ul div:hover {
-    background-color: #ebebeb;
-    cursor: pointer;
-    user-select: none;
-}
 
 /*MAIN*/
 
@@ -153,6 +148,20 @@ footer {
 
 /*MEDIA QUERIES*/
 
+/*MEDIA QUERY FOR ONLY HOVER CAPABLE DEVICES*/
+
+@media screen and (hover: hover) {
+/*NAVIGATION MENU*/
+
+    nav ul div:hover {
+        background-color: #ebebeb;
+        cursor: pointer;
+        user-select: none;
+    }
+}
+
+/*END OF MEDIA QUERY FOR ONLY HOVER CAPABLE DEVICES*/
+
 /*NAVGATION MENU / MAIN / ASIDE*/
 
 @media only screen and (max-width: 1400px) {
@@ -191,14 +200,16 @@ footer {
         padding: 0 30px 0 !important;
     }
 
-    nav li:hover {
-        background-color: transparent;
-    }
-
-    nav div:hover {
-        background-color: #ddd;
-        border-radius: 50px;
-        cursor: pointer;
+    @media screen and (hover: hover) {
+        nav li:hover {
+            background-color: transparent;
+        }
+    
+        nav div:hover {
+            background-color: #ddd;
+            border-radius: 50px;
+            cursor: pointer;
+        }
     }
 
     nav div {
@@ -240,10 +251,12 @@ footer {
         margin: 0 auto;
     }
 
-    nav div:hover {
-        background-color: #ddd;
-        border-radius: 50%;
-        cursor: pointer;
+    @media screen and (hover: hover) {
+        nav div:hover {
+            background-color: #ddd;
+            border-radius: 50%;
+            cursor: pointer;
+        }
     }
 }
 
